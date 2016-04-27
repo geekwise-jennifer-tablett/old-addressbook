@@ -1,11 +1,18 @@
 body{
-    background-color:#ffe07e;
+    background-color:#ffffff;
 }
-table{
-    height: 20rem;
-    width:30rem;
-    border:solid 1px #c79a45;
+#contactlist{
+    height:20rem;
+    width:20rem;
+    border:1px solid #000000;
 }
-tr{
-    background-color:#fdf0d2;
+#top_div{
+    height:5rem;
+    width:100%;
+    background-color: grey;
+}
+#search_display{
+    height:3rem;
+    width:98%;
+    border:3px solid #d8d8d8;
 }
