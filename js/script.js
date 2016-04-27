@@ -11,7 +11,7 @@ var contact = ['tiffany', 'khoa', 'veronica', 'nichole', 'alonzo'];
 
 
 //container to hold contact
-contactlist_container = document.createElement('div');
+contactlist_container = document.createElement('table');
 contactlist_container.setAttribute('id','contactlist');
 
 var create_contact = function(element_type,element_id){
@@ -31,12 +31,11 @@ input_element.setAttribute('placeholder','new contact');
 input_element.addEventListener('keydown',function(event){
     if(event.keyCode === 13){
         new_contact = this.value;
-        new_element = document.createElement('p');
+        new_element = document.createElement('tr');
         contact.push(new_contact)
         console.log(new_contact);
         new_element.textContent = new_contact;
         contactlist_container.appendChild(new_element);
-         contactlist_container.children[0].parentElement.insertBefore(new_contact, contactlist_container.children[0]);
         this.value = null;
             
             
@@ -55,7 +54,7 @@ document.addEventListener('DOMContentLoaded',function(event){
     
     //loop to create contact
     for(var i=0; i<contact.length; i++){
-        create_contact('p','contact_'+i);
+        create_contact('tr','contact_'+i);
         current_contact = document.getElementById('contact_'+i);
         current_contact.textContent = contact[i];
         
