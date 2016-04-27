@@ -1,6 +1,8 @@
 body{
     background-color:#ffffff;
 }
+
+/*initial page*/
 #contactlist{
     height:20rem;
     width:20rem;
@@ -15,4 +17,47 @@ body{
     height:3rem;
     width:98%;
     border:3px solid #d8d8d8;
+}
+#list{
+   height:5rem;
+   width:100%;
+   background-color: pink;
+}
+
+/*inside top_div*/
+#wifi_div{
+    height:2.5rem;
+    width:6rem;
+    float: left;
+    background-color: blue;
+}
+#time_div{
+    height:2.5rem;
+    width:6rem;
+    float: left;
+    background-color: yellow;
+}
+#battery_div{
+    height:2.5rem;
+    width:6rem;
+    float: left;
+    background-color: green;
+}
+#group_div{
+    height:2.5rem;
+    width:6rem;
+    float: left;
+    background-color: orange;
+}
+#title_div{
+    height:2.5rem;
+    width:6rem;
+    float: left;
+    background-color: red;
+}
+#addContact_div{
+    height:2.5rem;
+    width:6rem;
+    float: left;
+    background-color:purple;
 }
