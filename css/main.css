@@ -25,39 +25,30 @@ body{
 }
 
 /*inside top_div*/
-#wifi_div{
-    height:2.5rem;
-    width:6rem;
-    float: left;
-    background-color: blue;
-}
-#time_div{
-    height:2.5rem;
-    width:6rem;
-    float: left;
-    background-color: yellow;
-}
-#battery_div{
-    height:2.5rem;
-    width:6rem;
-    float: left;
-    background-color: green;
-}
 #group_div{
+    margin:5px;
     height:2.5rem;
     width:6rem;
-    float: left;
+    display:inline-block;
+    position: relative;
+    top:2rem;
     background-color: orange;
 }
 #title_div{
+    margin:5px;
     height:2.5rem;
     width:6rem;
-    float: left;
+    display:inline-block;
+    position: relative;
+    top:2rem;
     background-color: red;
 }
 #addContact_div{
+    margin:5px;
     height:2.5rem;
     width:6rem;
-    float: left;
+    display:inline-block;
+    position: relative;
+    top:2rem;
     background-color:purple;
 }
