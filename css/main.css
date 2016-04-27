@@ -1,0 +1,8 @@
+body{
+    background-color:#ffe07e;
+}
+div{
+    height: 20rem;
+    width:30rem;
+    border:solid 1px #c79a45;
+}
