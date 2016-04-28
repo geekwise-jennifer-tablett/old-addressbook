@@ -3,15 +3,39 @@ var group_div;
 var title_div;
 var addContact_div;
 var search_input;
-var contact;
 var contactlist_container;
-var current_;
+var current_contact;
 var new_contact;
 var new_element;
 //var input_element;
+var contact = [
+{
+    firsnName: 'tiffany',
+    lastName: 'ranish',
+    phoneNumber: '555-452-3212',
+    email:'blb@fun.com',
+},
+{
+    firsnName: 'khoa',
+    lastName: 'thoa',
+    phoneNumber: '555-456-1231',
+    email:'jljdj@great.com',
+},
+{
+    firsnName: 'alonzo',
+    lastName: 'yrigollen',
+    phoneNumber: '555-785-4525',
+    email:'',
+}];
 
-var contact = ['tiffany', 'khoa', 'veronica', 'nichole', 'alonzo'];
+function sortByKey(array, key) {
+    return array.sort(function(a, b) {
+        var x = a[key]; var y = b[key];
+        return ((x < y) ? -1 : ((x > y) ? 1 : 0));
+    });
+}
 
+contact = sortByKey(contact, 'lastName');
 
 
 top_div = document.createElement('div');
@@ -47,35 +71,12 @@ var create_contact = function(element_type,element_id){
 };
 
 
-//create input so users can add contacts
-// input_element = document.createElement('input');
-// input_element.setAttribute('id','contact_display');
-// input_element.setAttribute('placeholder','new contact');
-
-
-//hit enter to add a new contact
-// input_element.addEventListener('keydown',function(event){
-//     if(event.keyCode === 13){
-//         new_contact = this.value;
-//         new_element = document.createElement('p');
-//         contact.push(new_contact)
-//         console.log(new_contact);
-//         new_element.textContent = new_contact;
-//         contactlist_container.appendChild(new_element);
-//          contactlist_container.children[0].parentElement.insertBefore(new_contact, contactlist_container.children[0]);
-//         this.value = null;
-            
-            
-//         };
-    
-//     });
-
 
 
 //when webpage loads
 document.addEventListener('DOMContentLoaded',function(event){
     
-    //append to body
+ //append to body
     contactlist_container.appendChild(top_div);
     document.body.appendChild(contactlist_container);
     
@@ -90,139 +91,6 @@ document.addEventListener('DOMContentLoaded',function(event){
         create_contact('p','contact_'+i);
         current_contact = document.getElementById('contact_'+i);
         current_contact.textContent = contact[i];
-        
-        
-        
-    };
-    
-    
-    
-    
-})
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//Groups link setup
-// var a = document.createElement('a');
-// a.setAttribute('href',where link goes);
-// a.innerHTML = 'Groups';
-
-
-
- 
- 
-
-
-
-
-
-
- 
- 
-  
-
-
-
-
-
-
-//create input so users can add contacts
-// input_element = document.createElement('input');
-// input_element.setAttribute('id','contact_display');
-// input_element.setAttribute('placeholder','new contact');
-
-
-// //hit enter to add a new contact
-// input_element.addEventListener('keydown',function(event){
-//     if(event.keyCode === 13){
-//         new_contact = this.value;
-//         new_element = document.createElement('tr');
-//         contact.push(new_contact)
-//         console.log(new_contact);
-//         new_element.textContent = new_contact;
-//         contactlist_container.appendChild(new_element);
-//         this.value = null;
-            
-            
-//         };
-    
-//     });
-
-
-
-//when webpage loads
-//document.addEventListener('DOMContentLoaded',function(event){
-    
-    //append to body
-//   document.body.appendChild(contactlist_container);
-
-//    
-//   contactlist_container.appendChild(list_div);
-   
-    
-
-   
-   
-   
-  
-   //loop to create contact
-    // for(var i=0; i<contact_list.length; i++){
-    //     create_contact('p','contact_'+i);
-    //     current_contact = document.getElementById('contact_list_'+i);
-    //     current_contact.textContent = contact_list[i];
-    // };
-    
-     //document.body.appendChild(input_element);
-    //loop to create contact
-    // for(var i=0; i<contact.length; i++){
-    //     create_contact('tr','contact_'+i);
-    //     current_contact = document.getElementById('contact_'+i);
-    //     current_contact.textContent = contact[i];
-        
-        
-        
-    // };
-    
-    
-    
-    
-//});
+    };  
+});    
 
