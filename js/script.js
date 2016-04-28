@@ -8,34 +8,48 @@ var current_contact;
 var new_contact;
 var new_element;
 //var input_element;
+
+
 var contact = [
 {
-    firsnName: 'tiffany',
-    lastName: 'ranish',
+    first_name: 'tiffany',
+    last_name:'ranish',
     phoneNumber: '555-452-3212',
     email:'blb@fun.com',
 },
 {
-    firsnName: 'khoa',
-    lastName: 'thoa',
-    phoneNumber: '555-456-1231',
+    first_name: 'khoa',
+    last_name:'thoa',
+    phoneNumber: '',
     email:'jljdj@great.com',
 },
 {
-    firsnName: 'alonzo',
-    lastName: 'yrigollen',
+    first_name: 'alonzo',
+    last_name: 'yrigollen',
     phoneNumber: '555-785-4525',
     email:'',
 }];
 
-function sortByKey(array, key) {
-    return array.sort(function(a, b) {
-        var x = a[key]; var y = b[key];
-        return ((x < y) ? -1 : ((x > y) ? 1 : 0));
-    });
-}
 
-contact = sortByKey(contact, 'lastName');
+
+
+
+//trying to access keys
+// for(i in contact){
+    
+//     for(j in contact [i][j]){
+//         console.log(contact [i][j]); 
+//     };
+    
+// };
+
+contact.sort(function(smaller_value, larer_value) {
+    return smaller_value.lastName > larer_value.lastName
+        
+    });
+
+
+
 
 
 top_div = document.createElement('div');
@@ -71,6 +85,19 @@ var create_contact = function(element_type,element_id){
 };
 
 
+//Create a search function
+
+function search(last_name) {
+     var contactLength = contact.length;
+        for (var i = 0; i < contactLength; i++) {
+             if(contact[i].last_name == last_name){
+		        contact(contact[i]);
+		    };
+        };
+};
+       
+		   
+		    
 
 
 //when webpage loads
@@ -86,11 +113,21 @@ document.addEventListener('DOMContentLoaded',function(event){
     
     contactlist_container.appendChild(search_input);
     
-    //loop to create contact
+     //loop to create contact
     for(var i=0; i<contact.length; i++){
         create_contact('p','contact_'+i);
         current_contact = document.getElementById('contact_'+i);
-        current_contact.textContent = contact[i];
+        current_contact.textContent = contact[i].first_name + ' ' + contact[i].last_name;
     };  
+    
+    
+    //loop to create contact
+    // for(var i=0; i<contact.length; i++){
+    //     create_contact('p','contact_'+i);
+    //     current_contact = document.getElementById('contact_'+i) innerHTML= contact.firstName +  contact.lastName;
+    //     current_contact.textContent = contact[i];
+    // }; 
+    
+    //  document.getElementById('p').Object =
+    //  contact.firstName +  contact.lastName;
 });    
-
