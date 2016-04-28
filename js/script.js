@@ -20,12 +20,15 @@ top_div.setAttribute('id','top_div');
 //creating content inside top_div
 group_div  = document.createElement('div');
 group_div.setAttribute('id','group_div');
+group_div.innerHTML = 'Groups';
 
 title_div = document.createElement('div');
 title_div.setAttribute('id','title_div');
+title_div.innerHTML = 'All Contacts';
 
 addContact_div = document.createElement('div');
 addContact_div.setAttribute('id','addContact_div');
+addContact_div.innerHTML = '+';
 
 search_input = document.createElement('input');
 search_input.setAttribute('id','search_display');
