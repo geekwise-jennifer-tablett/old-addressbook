@@ -9,7 +9,8 @@ var contactlist_container;
 var current_contact;
 var new_contact;
 var new_element;
-//var input_element;
+var nav_div;
+var abc_nav;
 
 
 var contact = [
@@ -72,7 +73,11 @@ search_input = document.createElement('input');
 search_input.setAttribute('id','search_display');
 search_input.setAttribute('placeholder','search');
 
+//alphabet navigation
+nav_div = document.createElement('div');
+nav_div.setAttribute('id','nav_div');
 
+//loop to create navigation links
 
 //container to hold contact
 contactlist_container = document.createElement('div');
@@ -87,14 +92,27 @@ var create_contact = function(element_type,element_id){
 
 //Create a search function
 
-function search(last_name) {
-     var contactLength = contact.length;
-        for (var i = 0; i < contactLength; i++) {
-             if(contact[i].last_name == last_name){
-		        contact(contact[i]);
-		    };
-        };
-};
+// function search(last_name) {
+//      var contactLength = contact.length;
+//         for (var i = 0; i < contactLength; i++) {
+//              if(contact[i].last_name == last_name){
+// 		        contact(contact[i]);
+// 		    };
+//         };
+// };
+
+ 
+// contactlist =  function ( settings, searchData ) {
+//     if ( !contact_  ) { 
+//         return true;
+//     }
+ 
+//     if ( searchData[0].charAt(0) === contact_ ) {
+//         return true;
+//     }
+ 
+//     return false;
+// } );
        
 		   
 		    
