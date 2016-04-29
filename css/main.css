@@ -1,6 +1,5 @@
 body{
     text-align:center;
-    font-size:65.2%;
     font-family: 'Karla', sans-serif;
     background-color:#e8e8e8;
 }
@@ -10,38 +9,40 @@ body{
     margin:0 auto;
     height:auto;
     width:30rem;
-    border:1px solid #000000;
+    border:1px solid #b1b0b2;
+    box-shadow: 0 10px 6px -6px #777;
 }
 #top_div{
     
     height:5rem;
     width:100%;
-    font-size:2.2rem;
+    font-size:1rem;
     border-bottom: 1px solid #7E7D82;
     background-color:#f8f8f8;
 }
-search_input_container{
-    height:4rem;
-    width:100%;
-    border-bottom:solid 1px #a7a7a7;
+#search_input_container{
+    height:5rem;
+    width:99.6%;
+    border:solid 1px #a7a7a7;
     background-color:#cac9ce; 
 }
 
 #search_display{
+    margin-top:1rem;
     height:3rem;
-    width:98%;
-    border-radius:1px;
+    width:95%;
+    text-align: center;
+    border-radius:1rem;
+    border:none;
 }
-contactlist_container{
-    height:auto;
+#contactlist{
+    margin:0;
+    height:100%;
     width:100%;
+    background-color:#fcfcfc;
     
 }
-#list{
-   height:5rem;
-   width:100%;
-   background-color: pink;
-}
+
 
 /*inside top_div*/
 #group_div{
@@ -51,6 +52,8 @@ contactlist_container{
     display:inline-block;
     position: relative;
     top:.8rem;
+    left:-4rem;
+    font-size:2rem;
     line-height:2.5rem;
     text-align: center;
     color:#2376d2;
@@ -63,6 +66,8 @@ contactlist_container{
     display:inline-block;
     position: relative;
     top:.8rem;
+    font-size:1rem;
+    font-weight: bold;
     line-height:2.5rem;
     text-align: center;
 }
@@ -72,7 +77,9 @@ contactlist_container{
     width:6rem;
     display:inline-block;
     position: relative;
-    top:.8rem;
+    top:1.5rem;
+    left:4rem;
+    font-size:3rem;
     line-height:2.5rem;
     text-align: center;
     color:#2376d2;
