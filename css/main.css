@@ -1,21 +1,41 @@
 body{
-    background-color:#ffffff;
+    text-align:center;
+    font-size:65.2%;
+    font-family: 'Karla', sans-serif;
+    background-color:#e8e8e8;
 }
 
 /*initial page*/
-#contactlist{
-    height:20rem;
-    width:20rem;
+#addressbook{
+    margin:0 auto;
+    height:auto;
+    width:30rem;
     border:1px solid #000000;
 }
 #top_div{
+    
     height:5rem;
     width:100%;
+    font-size:2.2rem;
+    border-bottom: 1px solid #7E7D82;
+    background-color:#f8f8f8;
 }
+search_input_container{
+    height:4rem;
+    width:100%;
+    border-bottom:solid 1px #a7a7a7;
+    background-color:#cac9ce; 
+}
+
 #search_display{
     height:3rem;
     width:98%;
-    border:3px solid #d8d8d8;
+    border-radius:1px;
+}
+contactlist_container{
+    height:auto;
+    width:100%;
+    
 }
 #list{
    height:5rem;

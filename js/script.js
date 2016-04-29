@@ -1,7 +1,9 @@
+var addressbook;
 var top_div;
 var group_div;
 var title_div;
 var addContact_div;
+var search_input_container;
 var search_input;
 var contactlist_container;
 var current_contact;
@@ -34,14 +36,7 @@ var contact = [
 
 
 
-//trying to access keys
-// for(i in contact){
-    
-//     for(j in contact [i][j]){
-//         console.log(contact [i][j]); 
-//     };
-    
-// };
+
 
 contact.sort(function(smaller_value, larer_value) {
     return smaller_value.lastName > larer_value.lastName
@@ -50,6 +45,8 @@ contact.sort(function(smaller_value, larer_value) {
 
 
 
+addressbook = document.createElement('div');
+addressbook.setAttribute('id','addressbook');
 
 
 top_div = document.createElement('div');
@@ -67,6 +64,9 @@ title_div.innerHTML = 'All Contacts';
 addContact_div = document.createElement('div');
 addContact_div.setAttribute('id','addContact_div');
 addContact_div.innerHTML = '+';
+
+search_input_container = document.createElement('div');
+search_input_container.setAttribute('id','search_input_container');
 
 search_input = document.createElement('input');
 search_input.setAttribute('id','search_display');
@@ -104,14 +104,18 @@ function search(last_name) {
 document.addEventListener('DOMContentLoaded',function(event){
     
  //append to body
-    contactlist_container.appendChild(top_div);
-    document.body.appendChild(contactlist_container);
+    document.body.appendChild(addressbook);
+    addressbook.appendChild(top_div);
+    
     
     top_div.appendChild(group_div);
     top_div.appendChild(title_div); 
     top_div.appendChild(addContact_div);
     
-    contactlist_container.appendChild(search_input);
+    addressbook.appendChild(search_input_container);
+    search_input_container.appendChild(search_input);
+    
+    addressbook.appendChild(contactlist_container);
     
      //loop to create contact
     for(var i=0; i<contact.length; i++){
@@ -121,13 +125,5 @@ document.addEventListener('DOMContentLoaded',function(event){
     };  
     
     
-    //loop to create contact
-    // for(var i=0; i<contact.length; i++){
-    //     create_contact('p','contact_'+i);
-    //     current_contact = document.getElementById('contact_'+i) innerHTML= contact.firstName +  contact.lastName;
-    //     current_contact.textContent = contact[i];
-    // }; 
     
-    //  document.getElementById('p').Object =
-    //  contact.firstName +  contact.lastName;
 });    
