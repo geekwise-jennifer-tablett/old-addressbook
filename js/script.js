@@ -79,6 +79,8 @@ nav_div.setAttribute('id','nav_div');
 
 //loop to create navigation links
 
+
+
 //container to hold contact
 contactlist_container = document.createElement('div');
 contactlist_container.setAttribute('id','contactlist');
