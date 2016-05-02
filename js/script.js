@@ -12,7 +12,7 @@ var new_element;
 var nav_div;
 var new_abc;
 
- var abc_nav = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
+ var abc_array = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
 
 
 
@@ -156,14 +156,34 @@ document.addEventListener('DOMContentLoaded',function(event){
         nav_div = document.getElementById('nav_div_' + i);
         new_abc = document.createElement('p');
         new_abc.setAttribute('id','letter_container_'+i);
-        new_abc.textContent = abc_nav[i];
-        
-        // var letter_container = document.getElementById('letter_container_'+i);
+        new_abc.textContent = abc_array[i];
         
         nav_div.appendChild(new_abc); 
     };
-    
-   
+       
+       
+   //organization of names
+    for(i in nav_div){
+       var current_letter = abc_array[i];
+       var current_new_abc = document.getElementById('new_abc_' +i);
+       
+       //grabbing letters in name
+       for(i in contact){
+           current_letter = current_letter.toLowerCase();
+           console.log(current_letter);
+           var regex_pattern = new RegExp('^' + current_letter + '.|\w','gi');
+           
+           if(contact[i].first_name.match(regex_pattern)){
+           var inner_contact = document.createElement('p');
+           inner_contact.setAttribute('class','inner_contact');
+           inner_contact.textContent = contact[i].first_name + '' + contact[i].last_name;
+           current_new_abc.appendChild(inner_contact);
+           
+           };
+       
+       }; 
+       
+    };
     
     //abc_nav.addEventListener('click',function(event){});
     
