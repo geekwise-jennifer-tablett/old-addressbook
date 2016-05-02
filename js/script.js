@@ -11,7 +11,9 @@ var new_contact;
 var new_element;
 var nav_div;
 var new_abc;
+var current_letter
 
+//for organizing names
  var abc_array = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
 
 
@@ -143,11 +145,11 @@ document.addEventListener('DOMContentLoaded',function(event){
     
     
      //loop to create contact
-    for(var i=0; i<contact.length; i++){
-        create_contact('p','contact_'+i);
-        current_contact = document.getElementById('contact_'+i);
-        current_contact.textContent = contact[i].first_name + ' ' + contact[i].last_name;
-    };  
+    // for(var i=0; i<contact.length; i++){
+    //     create_contact('p','contact_'+i);
+    //     current_contact = document.getElementById('contact_'+i);
+    //     current_contact.textContent = contact[i].first_name + ' ' + contact[i].last_name;
+    // };  
     
     // created abc divs for organization 
     for(var i=0; i<26; i++){
@@ -163,20 +165,22 @@ document.addEventListener('DOMContentLoaded',function(event){
        
        
    //organization of names
-    for(i in nav_div){
+    for(i in abc_array){
        var current_letter = abc_array[i];
-       var current_new_abc = document.getElementById('new_abc_' +i);
+    //   console.log(current_letter);
+       var current_new_abc = document.getElementById('nav_div_' +i);
+       console.log(current_new_abc);
        
        //grabbing letters in name
        for(i in contact){
            current_letter = current_letter.toLowerCase();
-           console.log(current_letter);
-           var regex_pattern = new RegExp('^' + current_letter + '.|\w','gi');
+    //       console.log(current_letter);
+           var regex_pattern = new RegExp('^' + current_letter + '.*|\w','gi');
            
            if(contact[i].first_name.match(regex_pattern)){
            var inner_contact = document.createElement('p');
            inner_contact.setAttribute('class','inner_contact');
-           inner_contact.textContent = contact[i].first_name + '' + contact[i].last_name;
+           inner_contact.textContent = contact[i].first_name + ' ' + contact[i].last_name;
            current_new_abc.appendChild(inner_contact);
            
            };
