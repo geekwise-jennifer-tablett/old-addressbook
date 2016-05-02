@@ -21,6 +21,7 @@ var title_two_div;
 var done_div;
 var new_contact_bottom
 var photo_container_div;
+var photo_span;
 var name_group_div;
 
 //for organizing names
@@ -71,15 +72,15 @@ top_div.setAttribute('id','top_div');
 //creating content inside top_div
 group_div  = document.createElement('div');
 group_div.setAttribute('id','group_div');
-group_div.innerHTML = 'Groups';
+group_div.textContent = 'Groups';
 
 title_div = document.createElement('div');
 title_div.setAttribute('id','title_div');
-title_div.innerHTML = 'All Contacts';
+title_div.textContent = 'All Contacts';
 
 addContact_div = document.createElement('div');
 addContact_div.setAttribute('id','addContact_div');
-addContact_div.innerHTML = '+';
+addContact_div.textContent = '+';
 
 search_input_container = document.createElement('div');
 search_input_container.setAttribute('id','search_input_container');
@@ -142,15 +143,15 @@ new_contact_top.setAttribute('id','new_contact_top');
 //inside new_contact_top
 cancel_div  = document.createElement('div');
 cancel_div.setAttribute('id','cancel_div');
-cancel_div.innerHTML = 'Cancel';
+cancel_div.textContent = 'Cancel';
 
 title_two_div = document.createElement('div');
 title_two_div.setAttribute('id','title_div');
-title_two_div.innerHTML = 'New Contacts';
+title_two_div.textContent = 'New Contacts';
 
 done_div = document.createElement('div');
-done_div.setAttribute('id','cancel_div');
-done_div.innerHTML = 'Done';
+done_div.setAttribute('id','done_div');
+done_div.textContent = 'Done';
 
 
 
@@ -162,6 +163,9 @@ new_contact_bottom.setAttribute('id','new_contact_bottom');
 
 photo_container_div = document.createElement('div'); 
 photo_container_div.setAttribute('id','photo_container_div');
+
+// photo_span = document.createElelment('span');
+// photo_span.setAttribute('id','photo_span');
  
 name_group_div = document.createElement('div');
 name_group_div.setAttribute('id','name_group_div')
@@ -197,6 +201,8 @@ document.addEventListener('DOMContentLoaded',function(event){
   new_contact_div.appendChild(new_contact_bottom);
   new_contact_bottom.appendChild(photo_container_div);
   new_contact_bottom.appendChild(name_group_div);
+   
+
     
     // created abc divs for organization 
     for(var i=0; i<26; i++){

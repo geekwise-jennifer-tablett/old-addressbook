@@ -105,29 +105,76 @@ p[id^=letter_container_]{
 
 /*new contact page*/
 #new_contact_div{
+    margin:0 auto;
     height:5rem;
     width:30rem;
-   background-color:pink; 
+    background-color:pink; 
 }
 #new_contact_top{
     height:5rem;
     width:100%;
-    font-size:1rem;
     border-bottom: 1px solid #7E7D82;
     background-color:#f8f8f8;
 }
+/*inside new_contact_top*/
+#cancel_div{
+    margin:5px;
+    height:2.5rem;
+    width:6rem;
+    display:inline-block;
+    position: relative;
+    left:-4rem;
+    font-size:2rem;
+    line-height:2.5rem;
+    text-align: center;
+    color:#2376d2;
+}
+#title_two_div{
+    margin:5px
+    height:2.5rem;
+    width:6rem;
+    display:inline-block;
+    position: relative;
+    top:.8rem;
+    font-size:1rem;
+    font-weight: bold;
+    line-height:2.5rem;
+    text-align: center;
+}
+#done_div{
+    margin:5px;
+    height:2.5rem;
+    width:6rem;
+    display:inline-block;
+    position: relative;
+    left:4rem;
+    font-size:2rem;
+    line-height:2.5rem;
+    text-align: center;
+    color:#7e7d82;
+}
+
 #new_contact_bottom{
     margin:0;
     height:12rem;
     width:100%;
     background-color:blue;
 }
+/*inside new_contact_bottom*/
 #photo_container_div{
     height:10rem;
     width:25%;
     float:left;
     background-color:pink;
 }
+#photo_span{
+    height: 5rem;
+    width:5rem;
+    border: 2px solid #BDBDBD;
+    border-radius:70px;
+    font-size:1.8rem;
+    color:#0D7CE3;
+ }
 #name_group_div{
     height: 10rem;
     width:75%;
