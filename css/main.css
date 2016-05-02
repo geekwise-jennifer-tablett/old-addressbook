@@ -42,7 +42,12 @@ body{
     background-color:#fcfcfc;
     
 }
-
+#nav_div{
+    height:100%;
+    width:5%;
+    display: block;
+    background-color: orange;
+}
 
 /*inside top_div*/
 #group_div{
