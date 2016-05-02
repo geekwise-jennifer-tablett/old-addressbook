@@ -89,3 +89,48 @@ body{
     text-align: center;
     color:#2376d2;
 }
+
+/*inside organization for names*/
+p[id^=letter_container_]{
+    background-color:#f7f7f7 ;
+}
+.inner_contact{
+    text-align:left;
+    margin-left: 2rem;
+    border-bottom: 1px solid #B6B5B9;
+    padding:1.5rem 0 1.5rem 0;
+    font-weight:bold;
+    display: block;
+}
+
+/*new contact page*/
+#new_contact_div{
+    height:5rem;
+    width:30rem;
+   background-color:pink; 
+}
+#new_contact_top{
+    height:5rem;
+    width:100%;
+    font-size:1rem;
+    border-bottom: 1px solid #7E7D82;
+    background-color:#f8f8f8;
+}
+#new_contact_bottom{
+    margin:0;
+    height:12rem;
+    width:100%;
+    background-color:blue;
+}
+#photo_container_div{
+    height:10rem;
+    width:25%;
+    float:left;
+    background-color:pink;
+}
+#name_group_div{
+    height: 10rem;
+    width:75%;
+    float: left;
+    background-color: yellow;
+}

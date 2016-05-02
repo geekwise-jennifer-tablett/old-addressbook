@@ -13,6 +13,16 @@ var nav_div;
 var new_abc;
 var current_letter
 
+//for new contact when + is clicked
+var new_contact_div;
+var new_contact_top;
+var cancel_div;
+var title_two_div;
+var done_div;
+var new_contact_bottom
+var photo_container_div;
+var name_group_div;
+
 //for organizing names
  var abc_array = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
 
@@ -121,7 +131,40 @@ var create_contact = function(element_type,element_id){
 // } );
        
 		   
+		   
+//creating new contact container
+new_contact_div = document.createElement('div');
+new_contact_div.setAttribute('id','new_contact_div');
 		    
+new_contact_top = document.createElement('div');
+new_contact_top.setAttribute('id','new_contact_top');
+
+//inside new_contact_top
+cancel_div  = document.createElement('div');
+cancel_div.setAttribute('id','cancel_div');
+cancel_div.innerHTML = 'Cancel';
+
+title_two_div = document.createElement('div');
+title_two_div.setAttribute('id','title_div');
+title_two_div.innerHTML = 'New Contacts';
+
+done_div = document.createElement('div');
+done_div.setAttribute('id','cancel_div');
+done_div.innerHTML = 'Done';
+
+
+
+
+
+
+new_contact_bottom = document.createElement('div');
+new_contact_bottom.setAttribute('id','new_contact_bottom');
+
+photo_container_div = document.createElement('div'); 
+photo_container_div.setAttribute('id','photo_container_div');
+ 
+name_group_div = document.createElement('div');
+name_group_div.setAttribute('id','name_group_div')
 
 
 //when webpage loads
@@ -143,13 +186,17 @@ document.addEventListener('DOMContentLoaded',function(event){
     
     contactlist_container.appendChild(nav_div);
     
-    
-     //loop to create contact
-    // for(var i=0; i<contact.length; i++){
-    //     create_contact('p','contact_'+i);
-    //     current_contact = document.getElementById('contact_'+i);
-    //     current_contact.textContent = contact[i].first_name + ' ' + contact[i].last_name;
-    // };  
+  //for now appended eventualy on click display
+  document.body.appendChild(new_contact_div);
+  new_contact_div.appendChild(new_contact_top);
+  
+  new_contact_top.appendChild(cancel_div);
+  new_contact_top.appendChild(title_two_div);
+  new_contact_top.appendChild(done_div);
+  
+  new_contact_div.appendChild(new_contact_bottom);
+  new_contact_bottom.appendChild(photo_container_div);
+  new_contact_bottom.appendChild(name_group_div);
     
     // created abc divs for organization 
     for(var i=0; i<26; i++){
@@ -169,7 +216,7 @@ document.addEventListener('DOMContentLoaded',function(event){
        var current_letter = abc_array[i];
     //   console.log(current_letter);
        var current_new_abc = document.getElementById('nav_div_' +i);
-       console.log(current_new_abc);
+    //   console.log(current_new_abc);
        
        //grabbing letters in name
        for(i in contact){
@@ -191,6 +238,6 @@ document.addEventListener('DOMContentLoaded',function(event){
     
     //abc_nav.addEventListener('click',function(event){});
     
-   
+  
     
 });    
